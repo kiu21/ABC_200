@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+#include <atcoder/all>
+using namespace std;
+using namespace atcoder;
+#define rep(i, n) for (int i = 0; i < (int)(n); ++i)
+#define repp(i, s, n) for (int i = (s); i <= (int)(n); ++i)
+using ll = long long;
+using P = pair<int, int>;
+using table = vector<vector<int>>;
+const ll mod = 1000000007;
+template <typename T>
+bool chmax(T &a, const T& b) {if (a < b) {a = b;return true;}return false;}
+template <typename T>
+bool chmin(T &a, const T& b) {if (a > b) {a = b;return true;}return false;}
+
+int main()
+{
+  int l1,r1,l2,r2; cin>>l1>>r1>>l2>>r2;
+  int ans=0;
+  if(r1>l2 && r2>l1){
+    ans=min(r1,r2)-max(l1,l2);
+  }
+  cout<<ans<<endl;
+  return 0;
+}
